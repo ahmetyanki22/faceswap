@@ -431,7 +431,7 @@ create_desktop_shortcut () {
     fi ;
 }
 
-check_for_sudo
+# check_for_sudo
 check_for_curl
 banner
 user_input
