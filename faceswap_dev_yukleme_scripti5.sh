@@ -112,27 +112,27 @@ cleanup_tmp_dir() {
 
 
 ask () {
-    # Edited: her zaman varsayılan değeri döndürsün diye ayarlıyorum
-    printf -v $2 "${!2}"
+    # # Edited: her zaman varsayılan değeri döndürsün diye ayarlıyorum
+    # printf -v $2 "${!2}"
 }
 
 ask_yesno () {
-    # Ask yes or no. First Param: Question, 2nd param: Default
-    # Returns True for yes, False for No
-    case $2 in
-        [Yy]* ) opts="[YES/no]" ;;
-        [Nn]* ) opts="[yes/NO]" ;;
-    esac
-    while true; do
-        read -rp $'\e[36m'"$1 $opts: "$'\e[97m' yn
-        yn="${yn:-${2}}"
-        case $yn in
-            [Yy]* ) retval=true ; break ;;
-            [Nn]* ) retval=false ; break ;;
-            * ) echo "Please answer yes or no." ;;
-        esac
-    done
-    $retval
+    # # Ask yes or no. First Param: Question, 2nd param: Default
+    # # Returns True for yes, False for No
+    # case $2 in
+    #     [Yy]* ) opts="[YES/no]" ;;
+    #     [Nn]* ) opts="[yes/NO]" ;;
+    # esac
+    # while true; do
+    #     read -rp $'\e[36m'"$1 $opts: "$'\e[97m' yn
+    #     yn="${yn:-${2}}"
+    #     case $yn in
+    #         [Yy]* ) retval=true ; break ;;
+    #         [Nn]* ) retval=false ; break ;;
+    #         * ) echo "Please answer yes or no." ;;
+    #     esac
+    # done
+    # $retval
 }
 
 
